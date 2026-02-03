@@ -7,31 +7,61 @@
   src: url(/minecraft/Minecraft.ttf);
 }
 
+body {
+  background: url(/oak-log-texture.jpg);
+  margin: 0;
+  justify-self: center;
+}
+
 h1 {
   font-family: Minecraft;
   font-size: 2em;
+
+  @media (min-width: 400px) {
+    font-size: 2.5em;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 3em;
+    padding: none;
+  }
 }
 
 p {
+  font-family: Minecraft;
+  font-size: 1em;
+
+    @media (min-width: 400px) {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 1.5em;
+  }
+}
+
+/* iets van een outline? */
+section p {
+
 }
 
 article {
   text-align: center;
   justify-content: center;
-  /* object-fit: cover; */
   padding: 1em;
+  margin: 4em 0 4em 0;
   width: auto;
   height: auto;
   overflow: visible;
 }
 
-
-
-
 .profile-card-archievements {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 
+  @media (min-width: 850px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .profile-card-background {
@@ -39,46 +69,70 @@ article {
   filter: drop-shadow(30px 30px 20px #3d2f20);
   background-size: 100%;
   align-self: center;
-  /* overflow: visible; */
-  min-width: 320px; 
-  background-repeat: repeat; 
+  padding-bottom: 2em;
+  min-width: 320px;
+  background-repeat: repeat;
   justify-content: center;
 
-      @media (min-width: 400px) {
-        /* background-repeat: no-repeat;  */
-        width: 380px;
-        height: auto;
+  @media (min-width: 400px) {
+    width: 380px;
+    padding-bottom: 2.5em;
+    height: auto;
   }
 
-      @media (min-width: 850px) {
-        background-repeat: no-repeat; 
-        width: 1000px;
-        height: auto;
+  @media (min-width: 850px) {
+    padding-bottom: 2.5em;
+    width: 800px;
+    height: auto;
   }
 }
 
-img.profile-card-example-img {
+
+#mobile-view {
+  @media (max-width: 850px) {
+    display: none;
+  }
+      @media (max-width: 400px) {
+       display: none;
+  }
+}
+
+#pc-view {
+  @media (min-width: 850px) {
+    display: none;
+  }
+}
+
+/* iets van een randje dat lijkt op een minecraft painting */
+img  {
+    /* border: dashed;
+    border-width: 0.5em;
+    border-color: beige; */
+}
+
+img.profile-card-portrait-img {
   height: 200px;
   width: auto;
   transition: .25s .15s;
 }
 
-.profile-card-example-img-wrapper {
-    justify-content: center;
-    justify-self: center;
-    width: 200px;
-
+.profile-card-portrait-img-wrapper {
+  justify-content: center;
+  justify-self: center;
+  width: 200px;
   display: grid;
+
   img {
     grid-area: -1 / 1;
     transition: none;
   }
+
   img:last-child {
     order: -1;
   }
 }
 
-.profile-card-example-img-wrapper:hover {
+.profile-card-portrait-img-wrapper:hover {
   img:first-child {
     visibility: hidden;
   }
