@@ -2,26 +2,17 @@
   box-sizing: border-box;
 }
 
-body {
-  /* background: url(/1200px-SeasonalForest.jpg);  */
-  background-repeat: no-repeat;
-  justify-self: center;
-  /* align-items: start; */
-}
-
 @font-face {
   font-family: Minecraft;
   src: url(/minecraft/Minecraft.ttf);
 }
 
 h1 {
-font-family: Minecraft;
-font-size: 2em;
+  font-family: Minecraft;
+  font-size: 2em;
 }
 
 p {
-font-family: Minecraft;
-font-size: 1em;
 }
 
 article {
@@ -45,6 +36,7 @@ article {
 
 .profile-card-background {
   background-image: url(/Blank-sign-oak.png);
+  filter: drop-shadow(30px 30px 20px #3d2f20);
   background-size: 100%;
   align-self: center;
   /* overflow: visible; */
