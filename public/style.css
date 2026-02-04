@@ -118,18 +118,13 @@ img.profile-card-portrait-img {
 
 .profile-card-portrait-img-wrapper {
   justify-content: center;
-  justify-self: center;
-  width: 200px;
-  display: grid;
+  transform-origin: center 135px;
+}
 
-  img {
-    grid-area: -1 / 1;
-    transition: none;
-  }
+.lever-img.active {
+  rotate: 180deg;
+}
 
-  img:last-child {
-    order: -1;
-  }
 }
 
 .profile-card-portrait-img-wrapper:hover {
