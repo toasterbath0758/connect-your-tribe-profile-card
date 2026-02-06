@@ -24,7 +24,6 @@ personData.custom = JSON.parse( personData.custom )
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 console.log(personResponseJSON)
 
-
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
 
@@ -62,11 +61,10 @@ app.get('/secret', async function (request, response) {
    response.render('secret.liquid', {person: personResponseJSON.data})
 })
 
-app.get('/secret', async function (request, response) {
-   // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-   response.render('secret.liquid', {person: personResponseJSON.data})
-})
-
+// app.get('/secret', async function (request, response) {
+//    // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+//    response.render('secret.liquid', {person: personResponseJSON.data})
+// })
 
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
