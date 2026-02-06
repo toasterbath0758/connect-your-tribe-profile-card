@@ -110,25 +110,99 @@ img  {
     border-color: beige; */
 }
 
-img.profile-card-portrait-img {
-  height: 200px;
-  width: auto;
-  transition: .25s .15s;
+img.lever.active  {
+  rotate: 180deg;
+
+  .profile-card-background {
+    background: black;
+  }
 }
 
-.profile-card-portrait-img-wrapper {
+.lever-img {
+  margin: 5em 0 5em 0;
   justify-content: center;
   transform-origin: center 135px;
 }
 
 .lever-img.active {
   rotate: 180deg;
+} */
+
+article {
+  text-align: center;
+  justify-content: center;
+  width: auto;
 }
 
+/* De 3d hendel classes */
+/* hier de container van de 3d hendel */
+.lever-container {
+height: 500px;
 }
 
-.profile-card-portrait-img-wrapper:hover {
-  img:first-child {
-    visibility: hidden;
-  }
+/* de stenen achterkant */
+.lever-backside {
+  justify-self: center;
+  /* place-self: center; */
+  position: absolute;
+  justify-content: center;
+  display: grid;
+  width: calc(5*var(--minecraft-pixel-size));
+  height: calc(7*var(--minecraft-pixel-size));
+  background: url(cobblestone-texture.png);
+  background-size: cover;
+}
+
+/* de div class waar alle onderdelen in zitten */
+#lever {
+  scale: 110%;
+  perspective: 800px;
+  perspective-origin: 30px 0;
+  top: 65%;
+  left: 30%;
+  position: absolute;
+  z-index: 5;
+  transform-origin: var(--minecraft-pixel-size) var(--minecraft-pixel-size) calc(-9*var(--minecraft-pixel-size));
+  transform: rotate3d(1,0,0,30deg);
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+}
+
+#lever.active  {
+  transform: rotate3d(1,0,0,-30deg);
+}
+
+#lever-top {
+  position: absolute;
+  left: 0;
+  bottom: calc(2*var(--minecraft-pixel-size));
+  width: calc(2*var(--minecraft-pixel-size));
+  height: calc(10*var(--minecraft-pixel-size));
+  background: url(minecraft-lever-handle-top.png);
+  background-size: cover;
+  transform-origin: bottom left;
+  transform: rotate3d(1,0,0,90deg);
+}
+
+#lever-front {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(2*var(--minecraft-pixel-size));
+  height: calc(2*var(--minecraft-pixel-size));
+  background: url(minecraft-lever-handle-front.png);
+  background-size: cover;
+  transform: translate3d(0,0,-1,calc(10*var(--minecraft-pixel-size)));
+}
+
+#lever-bottom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(2*var(--minecraft-pixel-size));
+  height: calc(9*var(--minecraft-pixel-size));
+  background: url(minecraft-lever-handle-bottom.png);
+  background-size: cover;
+  transform-origin: top left;
+  transform: rotate3d(1,0,0,-90deg);
 }
