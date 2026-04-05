@@ -1,0 +1,59 @@
+{% render 'partials/head.liquid' %}
+
+    <article class="profile-card-background">
+      
+      <header class="profile-card-example-header">
+        <h1>{{ person.name }}</h1>
+        <p><em>Student FDND</em></p>
+      </header>
+
+      <section class="profile-card-portrait-img-wrapper">
+        <img src="/Pasport_Photo.jpg" alt="kevin van norden" width="400" height="400" class="profile-card-portrait-img">
+        <img src="/pixel-kevin.png" alt="kevin van norden in een minecraft-schilderij stijl" width="400" height="400" class="profile-card-portrait-img">
+      </section>
+      </article>
+      <article class="profile-card-background">
+      <section class="profile-card-archievements" id="mobile-view">
+      <div>
+        <p>Flierefluiten</p>
+        <p>🏆🏆🏆🏆</p>
+      </div>
+
+      <div>
+        <p>Duimendraaien</p>
+        <p>🏆🏆🏆🏆</p>
+      </div>
+
+      <div>
+        <p>Lanterfanten</p>
+        <p>🏆🏆🏆🏆</p>
+        </div>
+      </section>
+  
+      <p>
+      Ik kan nog niet coderen 
+      maar ik doe erg mijn best <br> Met HTML, CSS en JS wil ik vette, interactieve web apps maken.</p>
+      
+    </article>
+
+    <article class="profile-card-background" id="pc-view">
+          <section class="profile-card-archievements">
+        <p>Flierefluiten</p>
+        <p>🏆🏆🏆🏆</p>
+        
+        <p>Duimendraaien</p>
+        <p>🏆🏆🏆🏆</p>
+        
+        <p>Lanterfanten</p>
+        <p>🏆🏆🏆🏆</p>
+      </section>
+  
+      <p id="mobile-view">
+      Ik kan nog niet coderen 
+      maar ik doe erg mijn best <br> Met HTML, CSS en JS wil ik vette, interactieve web apps maken.
+      </p>
+    </article>
+
+    <script src="scripts/script.js"></script>
+  
+{% render 'partials/foot.liquid' %}
